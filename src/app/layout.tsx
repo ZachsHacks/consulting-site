@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zach Weiss | AI Consulting",
+  title: "Zach Weiss | Bespoke Software",
   description:
-    "AI automation consulting — helping businesses build smarter workflows with n8n, AI agents, and custom integrations.",
+    "Custom AI systems, automation, and web applications — tailored to the way your business operates.",
 };
 
 export default function RootLayout({
