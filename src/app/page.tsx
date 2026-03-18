@@ -1,235 +1,201 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-
-const services = [
-  {
-    title: "Custom Web Applications",
-    description:
-      "Every application I build is measured, cut, and stitched around your specific workflow — from backend automation to the interface your team uses daily.",
-    badge: "Apps",
-  },
-  {
-    title: "Workflow Automation",
-    description:
-      "I replace manual processes with intelligent workflows that run 24/7 — lead routing, invoice processing, data pipelines, and everything in between.",
-    badge: "Automation",
-  },
-  {
-    title: "AI Agent Development",
-    description:
-      "Custom AI agents that handle real work: research, drafting, data extraction, and decision support — purpose-built for your operations.",
-    badge: "AI",
-  },
-  {
-    title: "System Integration",
-    description:
-      "I connect your CRM, email, databases, and internal tools into one seamless pipeline so nothing falls through the cracks.",
-    badge: "Integration",
-  },
-];
+const CALENDLY_URL = "https://calendly.com/zsweiss/chat";
 
 const clientWork = [
   {
     name: "BP Soccer — Admin Platform",
     client: "David Gluck",
     description:
-      "A full-stack admin panel for managing a youth soccer league — families, kids, sessions, payments, and driver logistics, all in one place. Built to replace spreadsheets and group chats with a system that actually scales.",
-    tags: ["Next.js", "Full-Stack", "Admin Dashboard"],
+      "David was running a youth soccer league out of spreadsheets and group chats. I built a full admin panel that handles families, kids, sessions, payments, and driver logistics all in one place. The league now runs itself.",
+    tags: ["Custom Web App", "Admin Dashboard", "Payments"],
     image: "/clients/davidgluck.png",
   },
   {
     name: "HaloPrime — AI Operations",
     client: "Ryan Danielson",
     description:
-      "Building AI-powered automation and internal tooling for HaloPrime's operations — from n8n workflows to custom dashboards that keep the team moving fast.",
-    tags: ["n8n", "AI Automation", "Internal Tools"],
+      "Ryan's team was spending hours on tasks that could be automated. I built AI-powered workflows and internal dashboards that handle the repetitive work, so his team focuses on what actually matters.",
+    tags: ["Workflow Automation", "AI Agents", "Internal Tools"],
   },
   {
     name: "Accounting Platform",
     client: "Jacob",
     description:
-      "Currently building a custom accounting software solution — streamlining financial workflows with a clean, purpose-built interface.",
-    tags: ["In Progress", "Web App", "Finance"],
+      "Custom accounting software designed around how this firm actually operates. Replacing a patchwork of tools with one clean, purpose-built system.",
+    tags: ["Custom Web App", "Finance", "In Progress"],
     inProgress: true,
   },
 ];
 
-const personalProjects = [
+const steps = [
   {
-    name: "Personal Chief of Staff",
-    description:
-      "An AI assistant that knows my priorities, calendar, sleep data, and active projects — then tells me the single most important thing I should be doing right now. Integrates with Google Calendar, Oura Ring, and my task system. Built for how my brain actually works.",
-    tags: ["Next.js", "AI Agent", "Personal OS"],
+    number: "1",
+    title: "Tell me your problem",
+    body: "We get on a free 30-minute call. You walk me through your workflow and what is slowing you down. No tech knowledge required. I do the listening.",
   },
   {
-    name: "Job Agent",
-    description:
-      "A CLI tool that automates my entire job search — discovers listings, scores them against my qualifications, tailors my resume, and checks ATS compatibility. Fully hands-off.",
-    tags: ["Python", "AI Automation", "CLI"],
+    number: "2",
+    title: "I design the solution",
+    body: "I map out exactly what needs to be built and show you before writing a single line of code. You stay in the loop the whole way, no surprises.",
   },
   {
-    name: "Tailored Resume",
-    description:
-      "Paste a job description, get back a resume optimized for that specific role. Uses Claude to rewrite and restructure experience for maximum relevance.",
-    tags: ["Next.js", "Claude AI", "Automation"],
-  },
-  {
-    name: "LinkedIn Kondo",
-    description:
-      "A Chrome extension that brings order to LinkedIn DMs — label, snooze, and organize messages so no lead or conversation slips through the cracks.",
-    tags: ["Chrome Extension", "Productivity", "Sales"],
-  },
-  {
-    name: "Shiur Transcriber",
-    description:
-      "A web app that transcribes Torah lectures, generates clean PDFs, and emails them out — turning spoken wisdom into shareable written content.",
-    tags: ["Next.js", "Transcription", "PDF Generation"],
+    number: "3",
+    title: "You get a working system",
+    body: "I deliver something real and deployed. Not a prototype, not a demo. A system your team can use from day one.",
   },
 ];
 
-const testimonials: {
-  quote: string;
-  name: string;
-  role: string;
-  company: string;
-}[] = [];
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Nav */}
-      <nav className="border-b border-border/40 backdrop-blur-sm sticky top-0 z-50 bg-background/80">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold tracking-tight">
-              Zach Weiss
-            </span>
-            <span className="text-xs text-muted-foreground tracking-widest uppercase hidden sm:inline">
-              Bespoke Software
-            </span>
-          </div>
-          <div className="flex gap-4 items-center">
-            <a
-              href="#work"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
-            >
-              Work
-            </a>
-            <a
-              href="#services"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
-            >
-              Services
-            </a>
-            <a
-              href="mailto:zachweissbusiness@gmail.com"
-              className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
-            >
-              Get in Touch
-            </a>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <Hero />
+      <ClientSpotlight />
+      <HowItWorks />
+      <ClientWork />
+      <CTABlock />
+      <Footer />
+    </div>
+  );
+}
 
-      {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-20">
-        <div className="max-w-2xl">
-          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-6">
-            Bespoke Software Studio
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
-            Software that fits
-            <br />
-            <span className="text-muted-foreground">
-              like it was made for you.
-            </span>
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
-            I&apos;m Zach — I build custom AI systems, automation, and web
-            applications tailored to the way your business actually operates.
-            No off-the-rack solutions. Every project is measured, cut, and
-            delivered to fit your workflow perfectly.
-          </p>
-          <div className="flex gap-3">
-            <a
-              href="mailto:zachweissbusiness@gmail.com"
-              className={cn(buttonVariants({ size: "lg" }))}
-            >
-              Book a Consultation
-            </a>
-            <a
-              href="#work"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-            >
-              See My Work
-            </a>
-          </div>
+function Nav() {
+  return (
+    <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border">
+      <div className="max-w-5xl mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="/">
+          <img src="/logo.png" alt="Fitted Software Consulting" className="h-10 w-auto" />
+        </a>
+        <div className="flex items-center gap-6">
+          <a
+            href="#work"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
+          >
+            Work
+          </a>
+          <a
+            href="#how-it-works"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block"
+          >
+            How it works
+          </a>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-primary-foreground text-sm font-semibold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Book a Free Call
+          </a>
         </div>
-      </section>
+      </div>
+    </nav>
+  );
+}
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="border-t border-border/40" />
+function Hero() {
+  return (
+    <section className="max-w-5xl mx-auto px-6 pt-20 pb-20">
+      <p
+        className="text-xs font-semibold text-primary uppercase tracking-widest mb-5"
+      >
+        Custom Software for Small Businesses
+      </p>
+      <h1
+        className="text-5xl sm:text-6xl font-bold tracking-tight leading-[1.08] text-foreground mb-4"
+        style={{ fontFamily: "var(--font-jakarta)" }}
+      >
+        Your business deserves
+        <br />
+        <span className="text-primary">software built for it.</span>
+      </h1>
+      <p
+        className="text-xl sm:text-2xl font-medium text-muted-foreground mb-8"
+        style={{ fontFamily: "var(--font-jakarta)" }}
+      >
+        Not the closest thing you could find.
+      </p>
+      <p className="text-base sm:text-lg text-foreground/70 leading-relaxed max-w-xl mb-10">
+        I&apos;m Zach. I build <strong className="text-foreground font-semibold">custom apps, automations, and tools</strong> for
+        small business owners who are tired of squeezing their operations into
+        software that was never designed for them. You tell me the problem. I
+        build the solution.
+      </p>
+      <div className="flex flex-wrap gap-4 items-center">
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-primary text-primary-foreground font-semibold px-7 py-3.5 rounded-lg text-base hover:opacity-90 transition-opacity"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
+          Book a Free Call
+        </a>
+        <a
+          href="#work"
+          className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          See client work
+        </a>
       </div>
 
-      {/* About */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="max-w-2xl">
-          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
-            About
+      <div className="mt-14 pt-10 border-t border-border flex flex-wrap gap-10">
+        <div>
+          <p
+            className="text-3xl font-bold text-foreground"
+            style={{ fontFamily: "var(--font-jakarta)" }}
+          >
+            Fitted
           </p>
-          <h2 className="text-2xl font-semibold tracking-tight mb-6">
-            The right fit makes all the difference.
-          </h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              I&apos;ve spent my career at the intersection of tech and sales —
-              I know how to build things, but more importantly, I know how to
-              build the <em className="text-foreground not-italic font-medium">right</em> things. The ones that actually move the
-              needle for your business.
-            </p>
-            <p>
-              My approach is simple: I sit down with you, understand your
-              workflows inside and out, and then build a custom solution —
-              whether that&apos;s an AI agent, an automated pipeline, or a full
-              web app — that fits your team like a glove. Every client gets
-              a bespoke application designed specifically around their needs.
-              Not a template. Not a demo. A real, deployed product that&apos;s yours.
-            </p>
-            <p>
-              I work with n8n for workflow automation, modern AI models for
-              intelligent agents, and Next.js for clean, fast web apps. But the
-              tech is just the fabric — what I really do is make it fit.
-            </p>
-          </div>
+          <p className="text-sm text-muted-foreground mt-0.5">Every build made to measure</p>
         </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="border-t border-border/40" />
+        <div>
+          <p
+            className="text-3xl font-bold text-foreground"
+            style={{ fontFamily: "var(--font-jakarta)" }}
+          >
+            100%
+          </p>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            Deployed, running systems
+          </p>
+        </div>
+        <div>
+          <p
+            className="text-3xl font-bold text-foreground"
+            style={{ fontFamily: "var(--font-jakarta)" }}
+          >
+            0
+          </p>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            Templates. Everything is custom.
+          </p>
+        </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Client Interview */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
-          Client Spotlight
+function ClientSpotlight() {
+  return (
+    <section className="bg-secondary border-y border-border py-20">
+      <div className="max-w-5xl mx-auto px-6">
+        <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-4">
+          Real Results
         </p>
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
+        <h2
+          className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
           Hear it from a client.
         </h2>
-        <p className="text-muted-foreground mb-8">
-          A conversation with David Gluck about building the BP Soccer admin platform.
+        <p className="text-base text-muted-foreground mb-8 max-w-xl leading-relaxed">
+          David Gluck ran BP Soccer, a youth league in Brooklyn, out of
+          spreadsheets and group chats. Here is what happened when we built him
+          a real system.
         </p>
-        <div className="rounded-lg overflow-hidden border border-border/60 bg-card/50">
+        <div className="rounded-xl overflow-hidden border border-border bg-background max-w-3xl">
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <iframe
               src="https://share.descript.com/embed/2Njnpq2tMKW"
@@ -239,221 +205,193 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="border-t border-border/40" />
+        <div className="mt-7 border-l-4 border-primary pl-5 max-w-2xl">
+          <p className="text-base sm:text-lg text-foreground leading-relaxed italic mb-3">
+            &ldquo;Zach built exactly what I needed. Not a template, not a
+            workaround. The system fits our league perfectly.&rdquo;
+          </p>
+          <p className="text-sm font-semibold text-foreground">David Gluck</p>
+          <p className="text-sm text-muted-foreground">BP Soccer, Brooklyn</p>
+        </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Client Work */}
-      <section id="work" className="max-w-5xl mx-auto px-6 py-20">
-        <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
+function HowItWorks() {
+  return (
+    <section id="how-it-works" className="py-20">
+      <div className="max-w-5xl mx-auto px-6">
+        <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-4">
+          The Process
+        </p>
+        <h2
+          className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
+          Simple from start to finish.
+        </h2>
+        <p className="text-base text-muted-foreground mb-12 max-w-xl leading-relaxed">
+          No tech jargon, no lengthy proposals. Here is how we go from problem
+          to working software.
+        </p>
+        <div className="grid sm:grid-cols-3 gap-10">
+          {steps.map((step) => (
+            <div key={step.number} className="flex flex-col gap-4">
+              <div
+                className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-lg font-bold flex-shrink-0"
+                style={{ fontFamily: "var(--font-jakarta)" }}
+              >
+                {step.number}
+              </div>
+              <h3
+                className="text-lg font-semibold text-foreground"
+                style={{ fontFamily: "var(--font-jakarta)" }}
+              >
+                {step.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {step.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClientWork() {
+  return (
+    <section id="work" className="bg-secondary border-y border-border py-20">
+      <div className="max-w-5xl mx-auto px-6">
+        <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-4">
           Portfolio
         </p>
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
-          Client Work
+        <h2
+          className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight mb-3"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
+          Work I&apos;ve shipped.
         </h2>
-        <p className="text-muted-foreground mb-10">
-          Every engagement delivers a deployed, running system — not a slide deck.
+        <p className="text-base text-muted-foreground mb-10 max-w-xl leading-relaxed">
+          Every project is a real, deployed system. Not a slide deck.
         </p>
-        <div className="grid gap-6">
+        <div className="flex flex-col gap-5">
           {clientWork.map((project) => (
-            <Card
+            <div
               key={project.name}
-              className={cn(
-                "bg-card/50 border-border/60 hover:border-border transition-colors overflow-hidden",
-                project.inProgress && "opacity-80"
-              )}
+              className={`bg-background rounded-xl border border-border overflow-hidden ${
+                project.inProgress ? "opacity-75" : ""
+              }`}
             >
-              <div className={cn("grid", project.image ? "md:grid-cols-2" : "grid-cols-1")}>
+              <div
+                className={`grid ${
+                  project.image ? "md:grid-cols-[280px_1fr]" : "grid-cols-1"
+                }`}
+              >
                 {project.image && (
-                  <div className="relative aspect-video md:aspect-auto overflow-hidden border-b md:border-b-0 md:border-r border-border/40">
+                  <div className="relative overflow-hidden border-b md:border-b-0 md:border-r border-border">
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-top min-h-[180px]"
                     />
                   </div>
                 )}
-                <div>
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-1">
-                      <CardTitle className="text-lg">{project.name}</CardTitle>
-                      {project.inProgress && (
-                        <Badge variant="outline" className="text-xs">
-                          In Progress
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-xs text-muted-foreground">
-                      Client: {project.client}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <CardDescription className="text-sm leading-relaxed">
-                      {project.description}
-                    </CardDescription>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags
-                        .filter((t) => t !== "In Progress")
-                        .map((tag) => (
-                          <Badge key={tag} variant="outline" className="text-xs">
-                            {tag}
-                          </Badge>
-                        ))}
-                    </div>
-                  </CardContent>
+                <div className="p-7">
+                  <p className="text-xs text-muted-foreground font-medium mb-2">
+                    Client: {project.client}
+                  </p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3
+                      className="text-lg font-semibold text-foreground"
+                      style={{ fontFamily: "var(--font-jakarta)" }}
+                    >
+                      {project.name}
+                    </h3>
+                    {project.inProgress && (
+                      <span className="text-xs text-muted-foreground border border-border px-2.5 py-0.5 rounded-full">
+                        In Progress
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags
+                      .filter((t) => t !== "In Progress")
+                      .map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                  </div>
                 </div>
               </div>
-            </Card>
-          ))}
-        </div>
-
-        <div className="mt-16">
-          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
-            Personal Lab
-          </p>
-          <h3 className="text-xl font-semibold tracking-tight mb-2">
-            Things I Build for Myself
-          </h3>
-          <p className="text-muted-foreground mb-10">
-            If I hit a problem, I build the solution. These projects keep my
-            skills sharp and my life running smoothly.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {personalProjects.map((project) => (
-              <Card
-                key={project.name}
-                className="bg-card/50 border-border/60 hover:border-border transition-colors"
-              >
-                <CardHeader>
-                  <CardTitle className="text-base">{project.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-sm leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="border-t border-border/40" />
-      </div>
-
-      {/* Services */}
-      <section id="services" className="max-w-5xl mx-auto px-6 py-20">
-        <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
-          Services
-        </p>
-        <h2 className="text-2xl font-semibold tracking-tight mb-2">
-          What I Build
-        </h2>
-        <p className="text-muted-foreground mb-10">
-          Bespoke solutions, delivered and deployed.
-        </p>
-        <div className="grid sm:grid-cols-2 gap-6">
-          {services.map((service) => (
-            <Card
-              key={service.title}
-              className="bg-card/50 border-border/60 hover:border-border transition-colors"
-            >
-              <CardHeader>
-                <Badge variant="outline" className="w-fit mb-2 text-xs tracking-wider uppercase">
-                  {service.badge}
-                </Badge>
-                <CardTitle className="text-lg">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      {testimonials.length > 0 && (
-        <>
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="border-t border-border/40" />
-          </div>
-          <section
-            id="testimonials"
-            className="max-w-5xl mx-auto px-6 py-20"
-          >
-            <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
-              Testimonials
-            </p>
-            <h2 className="text-2xl font-semibold tracking-tight mb-10">
-              What Clients Say
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.map((t, i) => (
-                <Card key={i} className="bg-card/50 border-border/60">
-                  <CardContent className="pt-6">
-                    <p className="text-sm leading-relaxed mb-4 italic">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <div>
-                      <p className="text-sm font-medium">{t.name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {t.role}, {t.company}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
-          </section>
-        </>
-      )}
-
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="border-t border-border/40" />
-      </div>
-
-      {/* CTA */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <Card className="bg-primary text-primary-foreground border-0">
-          <CardContent className="py-12 px-8 text-center">
-            <h2 className="text-2xl font-semibold tracking-tight mb-3">
-              Let&apos;s build something that fits.
-            </h2>
-            <p className="text-primary-foreground/70 mb-6 max-w-md mx-auto">
-              Tell me what&apos;s slowing your team down and I&apos;ll show you
-              what&apos;s possible. No fluff, no sales pitch — just a
-              conversation about your business.
-            </p>
-            <a
-              href="mailto:zachweissbusiness@gmail.com"
-              className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
-            >
-              zachweissbusiness@gmail.com
-            </a>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border/40 py-8">
-        <div className="max-w-5xl mx-auto px-6 flex justify-between items-center text-sm text-muted-foreground">
-          <span>&copy; {new Date().getFullYear()} Zach Weiss</span>
-          <span className="tracking-widest uppercase text-xs">Brooklyn, NY</span>
+          ))}
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
+  );
+}
+
+function CTABlock() {
+  return (
+    <section className="bg-foreground py-20 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-5">
+          Ready to fix it?
+        </p>
+        <h2
+          className="text-3xl sm:text-5xl font-bold text-background tracking-tight leading-tight mb-5"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
+          Let&apos;s build something
+          <br />
+          made for your business.
+        </h2>
+        <p className="text-base text-background/60 max-w-md mx-auto mb-9 leading-relaxed">
+          Tell me what is slowing your team down. We will get on a free call and
+          figure out what is possible. No pitch, no pressure.
+        </p>
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-primary text-primary-foreground font-semibold px-9 py-4 rounded-lg text-base hover:opacity-90 transition-opacity"
+          style={{ fontFamily: "var(--font-jakarta)" }}
+        >
+          Book a Free Call
+        </a>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-border py-8">
+      <div className="max-w-5xl mx-auto px-6 flex justify-between items-center text-sm text-muted-foreground">
+        <div className="flex items-center gap-4">
+          <img src="/logo.png" alt="Fitted Software Consulting" className="h-7 w-auto opacity-70" />
+          <span>&copy; {new Date().getFullYear()} Fitted Software Consulting</span>
+        </div>
+        <div className="flex items-center gap-6">
+          <a
+            href="mailto:zachweissbusiness@gmail.com"
+            className="hover:text-foreground transition-colors"
+          >
+            zachweissbusiness@gmail.com
+          </a>
+          <span className="hidden sm:block">Brooklyn, NY</span>
+        </div>
+      </div>
+    </footer>
   );
 }
