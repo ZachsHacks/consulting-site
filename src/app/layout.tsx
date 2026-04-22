@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Zach Weiss | Bespoke Software",
+  title: "Zach Weiss · Custom Software Studio",
   description:
-    "Custom AI systems, automation, and web applications — tailored to the way your business operates.",
+    "Custom software for owner-operated businesses running on paper, spreadsheets, and group chats. I design, build, and ship the system your team actually uses.",
 };
 
 export default function RootLayout({
@@ -24,12 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body data-screen-label="Zach Weiss — Cinematic">{children}</body>
     </html>
   );
 }
