@@ -1,10 +1,42 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const SITE_URL = "https://zachweiss.ai";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
   description:
-    "Custom apps for owner-operated businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat. Book a free discovery call.",
+    "Custom apps for owner-operated small businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat. Message on WhatsApp.",
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Weiss & Co.",
+    title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
+    description:
+      "Custom apps for owner-operated small businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Weiss & Co. — Custom apps, built with AI, shipped in 21 days",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
+    description:
+      "Custom apps for owner-operated small businesses. Built with AI. Shipped in 21 days. $25K flat.",
+    images: ["/opengraph-image"],
+  },
+  icons: {
+    icon: [
+      { url: "/icon", type: "image/png", sizes: "512x512" },
+    ],
+    apple: { url: "/apple-icon", type: "image/png", sizes: "180x180" },
+  },
 };
 
 export default function RootLayout({

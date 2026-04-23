@@ -5,6 +5,7 @@ import {
   SHOW_CASES,
   CALENDLY_URL,
   EMAIL,
+  WHATSAPP_URL,
   PRICE_USD,
   TIMELINE_LABEL,
   RETAINER_MIN,
@@ -76,12 +77,12 @@ export default function Home() {
             <a href="#pricing">Pricing</a>
           </div>
           <a
-            href={CALENDLY_URL}
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
             className="nav-cta"
           >
-            Book a Call <span className="arrow">→</span>
+            Message <span className="arrow">→</span>
           </a>
         </div>
       </nav>
@@ -115,15 +116,20 @@ export default function Home() {
               </p>
               <div className="cta">
                 <a
-                  href={CALENDLY_URL}
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="btn primary"
                 >
-                  Book a Free Discovery Call →
+                  Message on WhatsApp →
                 </a>
-                <a href="#pricing" className="btn ghost">
-                  See Pricing
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn ghost"
+                >
+                  Or book a call
                 </a>
               </div>
             </div>
@@ -693,15 +699,23 @@ export default function Home() {
 
             <div className="price-cta">
               <a
-                href={CALENDLY_URL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="btn primary"
               >
-                Book a Free Discovery Call →
+                Message on WhatsApp →
+              </a>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn ghost"
+              >
+                Or book a call
               </a>
               <span className="price-note">
-                30 minutes. No deck. No pitch. No pressure.
+                Quick answer. No deck. No pitch. No pressure.
               </span>
             </div>
           </div>
@@ -726,15 +740,20 @@ export default function Home() {
               </p>
               <div className="c-actions">
                 <a
-                  href={CALENDLY_URL}
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="btn primary big"
                 >
-                  Book a Call on Calendly →
+                  Message Zach on WhatsApp →
                 </a>
-                <a href={`mailto:${EMAIL}`} className="btn ghost">
-                  Or email me directly
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn ghost"
+                >
+                  Or book a call
                 </a>
               </div>
             </div>
@@ -745,32 +764,32 @@ export default function Home() {
                 </h4>
                 <div className="steps">
                   <div className="step">
-                    <span className="w">Day 00</span>
-                    <span>You book a call on Calendly. No form, no gatekeeping.</span>
+                    <span className="w">Hour 00</span>
+                    <span>
+                      You message me on WhatsApp. I reply within the hour.
+                    </span>
                   </div>
                   <div className="step">
                     <span className="w">Day 01</span>
                     <span>
-                      30-minute discovery call. I ask how the business really
-                      runs. No pitch, no deck.
+                      Quick chat to size up the fit. No deck, no pitch.
                     </span>
                   </div>
                   <div className="step">
-                    <span className="w">Day 02–03</span>
+                    <span className="w">Day 02–04</span>
                     <span>
-                      One-page scope sent. Flat {priceFormatted} confirmed.
-                      You sign, you pay 50 percent, we kick off.
+                      30-minute call. One-page scope written. Flat{" "}
+                      {priceFormatted} confirmed.
                     </span>
                   </div>
                   <div className="step">
-                    <span className="w">Day 04–21</span>
+                    <span className="w">Day 05</span>
                     <span>
-                      I build. You get progress updates. AI does the grunt
-                      work. I do the thinking.
+                      You sign. You pay 50 percent. We kick off.
                     </span>
                   </div>
                   <div className="step">
-                    <span className="w">Day 21</span>
+                    <span className="w">Day 26</span>
                     <span>
                       First login. Real users, real data. Your custom app,
                       live and yours.
@@ -821,12 +840,14 @@ export default function Home() {
             </div>
             <div>
               <h5>Get in touch</h5>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                WhatsApp
+              </a>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer">
                 Book a call
               </a>
               <a href={`mailto:${EMAIL}`}>Email</a>
               <a href="#pricing">Pricing</a>
-              <a href="#process">Process</a>
             </div>
           </div>
           <div className="colophon">
