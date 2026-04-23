@@ -152,14 +152,19 @@ nav.top .inner {
   transition: all 0.25s;
   white-space: nowrap;
   letter-spacing: -0.005em;
-  flex-shrink: 0;
+  justify-self: end;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 .nav-cta:hover {
   background: var(--amber);
   color: #1a0b04;
+  box-shadow: 0 4px 14px rgba(255, 138, 61, 0.35);
 }
 .nav-cta svg {
   transition: transform 0.25s;
+  flex-shrink: 0;
 }
 .nav-cta:hover svg {
   transform: translateX(1px);
