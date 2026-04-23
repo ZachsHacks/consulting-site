@@ -1266,13 +1266,11 @@ footer {
 .foot-big {
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  font-size: clamp(80px, 12vw, 200px);
-  line-height: 0.85;
+  font-size: clamp(44px, 11vw, 200px);
+  line-height: 0.92;
   letter-spacing: -0.06em;
   padding: 32px 0 40px;
   border-bottom: 1px solid var(--hair);
-  white-space: nowrap;
-  overflow: hidden;
 }
 .foot-big .italic {
   font-family: "Instrument Serif", serif;
