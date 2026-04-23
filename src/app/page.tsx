@@ -7,6 +7,7 @@ import {
   CALENDLY_URL,
   EMAIL,
   WHATSAPP_URL,
+  LINKEDIN_URL,
   PRICE_USD,
   TIMELINE_LABEL,
   RETAINER_MIN,
@@ -129,7 +130,8 @@ export default function Home() {
               </p>
               <div className="cta">
                 <a href="#intake" className="btn primary">
-                  Submit an inquiry →
+                  Submit an inquiry{" "}
+                  <span className="btn-arrow">→</span>
                 </a>
                 <a
                   href={WHATSAPP_URL}
@@ -827,7 +829,7 @@ export default function Home() {
 
             <div className="price-cta">
               <a href="#intake" className="btn primary">
-                Submit an inquiry →
+                Submit an inquiry <span className="btn-arrow">→</span>
               </a>
               <a
                 href={WHATSAPP_URL}
@@ -893,16 +895,12 @@ export default function Home() {
               <a href="#services">Integration</a>
             </div>
             <div>
-              <h5>Stack</h5>
-              <a>Next.js · TypeScript</a>
-              <a>Supabase · Prisma</a>
-              <a>n8n · Claude</a>
-              <a>Stripe · Twilio</a>
-            </div>
-            <div>
               <h5>Get in touch</h5>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
                 WhatsApp
+              </a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+                LinkedIn
               </a>
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer">
                 Book a call
@@ -916,7 +914,6 @@ export default function Home() {
               © {new Date().getFullYear()} {STUDIO_NAME} · Custom apps, built
               with AI
             </span>
-            <span>Set in Inter · Instrument Serif · JetBrains Mono</span>
             <span>Measured · Cut · Delivered</span>
           </div>
         </div>

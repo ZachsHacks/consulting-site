@@ -271,7 +271,7 @@ export default function IntakeFormComponent({
             rel="noreferrer"
             className="btn primary"
           >
-            Message on WhatsApp →
+            Message on WhatsApp <span className="btn-arrow">→</span>
           </a>
           <button
             type="button"
@@ -514,7 +514,13 @@ export default function IntakeFormComponent({
           className="btn primary big"
           disabled={submitting}
         >
-          {submitting ? "Sending…" : "Send my inquiry →"}
+          {submitting ? (
+            "Sending…"
+          ) : (
+            <>
+              Send my inquiry <span className="btn-arrow">→</span>
+            </>
+          )}
         </button>
         <a
           href={WHATSAPP_URL}

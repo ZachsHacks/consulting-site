@@ -2,6 +2,7 @@ export const SHOW_CASES = false;
 
 export const CALENDLY_URL = "https://calendly.com/zsweiss/chat";
 export const EMAIL = "zachweissbusiness@gmail.com";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/zacharyshaleweiss/";
 export const WHATSAPP_NUMBER = "12243688111";
 export const WHATSAPP_MESSAGE =
   "Hi Zach, I'd like to talk about a custom app for my business.";
