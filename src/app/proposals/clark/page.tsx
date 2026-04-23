@@ -69,11 +69,11 @@ export default function ClarkProposal() {
         <section className="p-section preamble">
           <div className="preamble-label">Funny thing</div>
           <p>
-            Before we met I was already running this exact motion solo. Same
-            flat $25K, same 21 days, same AI stack. You landed on the thesis
-            from the distribution side. I landed there from the operator
-            side. Which is the whole argument for this being a partnership,
-            not a competition.
+            Before we met I was already chasing the same business model solo.
+            Custom internal apps for owner-operators, built with AI,
+            flat-fee-per-build. You landed there from the distribution side.
+            I landed there from the operator side. Which is the whole
+            argument for this being a partnership, not a competition.
           </p>
         </section>
 
