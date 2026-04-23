@@ -81,8 +81,22 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             className="nav-cta"
+            aria-label="Message Zach on WhatsApp"
           >
-            Message <span className="arrow">→</span>
+            Message
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </a>
         </div>
       </nav>

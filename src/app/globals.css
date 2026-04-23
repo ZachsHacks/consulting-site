@@ -140,26 +140,29 @@ nav.top .inner {
 }
 .nav-cta {
   font-size: 13px;
-  font-weight: 500;
-  padding: 7px 14px 7px 16px;
+  font-weight: 600;
+  padding: 8px 14px 8px 16px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid color-mix(in oklab, var(--ink) 25%, transparent);
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
   transition: all 0.25s;
   white-space: nowrap;
   letter-spacing: -0.005em;
+  flex-shrink: 0;
 }
 .nav-cta:hover {
-  border-color: var(--amber);
-  color: var(--amber);
+  background: var(--amber);
+  color: #1a0b04;
 }
-.nav-cta .arrow {
-  color: var(--amber);
+.nav-cta svg {
   transition: transform 0.25s;
+}
+.nav-cta:hover svg {
+  transform: translateX(1px);
 }
 .nav-cta .arrow {
   transition: transform 0.25s;
