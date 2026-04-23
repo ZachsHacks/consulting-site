@@ -978,8 +978,8 @@ export default function Home() {
               <a href={CALENDLY_URL} target="_blank" rel="noreferrer">
                 Book a call
               </a>
+              <a href="/intake">Intake form</a>
               <a href={`mailto:${EMAIL}`}>Email</a>
-              <a href="#pricing">Pricing</a>
             </div>
           </div>
           <div className="colophon">
