@@ -339,10 +339,10 @@ export default function IntakeFormComponent({
               What are you trying to fix?
             </div>
             <p className="intake-voice-sub">
-              Be specific. Paper slips a day? Group chats turning into
-              CRMs? The one workflow that eats every Sunday night? The
-              more honest and detailed, the better the proposal I can
-              write you.
+              Be specific. The manual work eating your team&apos;s day.
+              The group chats pretending to be a CRM. The workflow
+              everyone in the office hates. The more honest and
+              detailed, the better the proposal I can write you.
             </p>
           </div>
           <div className="intake-mode-toggle" role="tablist">

@@ -4,7 +4,7 @@ export const CALENDLY_URL = "https://calendly.com/zsweiss/chat";
 export const EMAIL = "zachweissbusiness@gmail.com";
 export const WHATSAPP_NUMBER = "12243688111";
 export const WHATSAPP_MESSAGE =
-  "Hi Zach, saw your site and have a quick question about my business.";
+  "Hi Zach, I'd like to talk about a custom app for my business.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const PRICE_USD = 25000;

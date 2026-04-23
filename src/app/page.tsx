@@ -228,28 +228,30 @@ export default function Home() {
           </div>
           <div className="services reveal">
             <article className="service">
-              <div className="num">S.01 / Field & floor</div>
+              <div className="num">S.01 / Operations</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  Route & <span className="italic">dispatch</span>
+                  Scheduling & <span className="italic">dispatch</span>
                 </h3>
                 <p>
-                  Kill the 5am whiteboard. Drivers get the day on a phone.
-                  You get a live map.
+                  Your team knows where to be and what to do, without a 5am
+                  group-chat scramble. Techs, crews, coaches, drivers,
+                  cleaners, whoever.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.02 / Intake</div>
+              <div className="num">S.02 / Customers</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  Order <span className="italic">intake</span>
+                  Intake & <span className="italic">booking</span>
                 </h3>
                 <p>
-                  Customers order on a link, not a screenshot. Inventory
-                  updates itself.
+                  Customers, tenants, players, or members sign up on a link,
+                  not a screenshot. Your calendar and roster handle
+                  themselves.
                 </p>
               </div>
             </article>
@@ -267,16 +269,16 @@ export default function Home() {
               </div>
             </article>
             <article className="service">
-              <div className="num">S.04 / Customers</div>
+              <div className="num">S.04 / Records</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
                   Custom <span className="italic">CRM</span>
                 </h3>
                 <p>
-                  Not Salesforce. Not Monday. Yours. Built around how your
-                  shop actually sells, not how a VC in San Francisco thinks
-                  you should.
+                  Every customer, member, or family in one searchable place.
+                  Not Salesforce. Not Monday. Yours, built around how you
+                  actually run.
                 </p>
               </div>
             </article>
@@ -288,8 +290,8 @@ export default function Home() {
                   Billing & <span className="italic">invoicing</span>
                 </h3>
                 <p>
-                  Invoices fire the second a job closes. Stripe, ACH, or on
-                  account. No more midnight typing.
+                  Invoices fire the second a job, session, or order closes.
+                  Stripe, ACH, or on account. No more midnight typing.
                 </p>
               </div>
             </article>
@@ -301,8 +303,8 @@ export default function Home() {
                   Owner <span className="italic">dashboard</span>
                 </h3>
                 <p>
-                  Revenue, open jobs, A/R, who owes you what. The number you
-                  need to see before Shabbos.
+                  Revenue, open work, A/R, who owes you what. The one number
+                  you need to see before Shabbos.
                 </p>
               </div>
             </article>
@@ -478,8 +480,8 @@ export default function Home() {
                 <li>
                   <span className="icon">×</span>
                   <span>
-                    Whiteboard route planning at 5am, redone by hand every
-                    time a driver calls out
+                    A whiteboard or group chat telling your team where to be
+                    each morning
                   </span>
                 </li>
                 <li>
@@ -513,15 +515,15 @@ export default function Home() {
                 <li>
                   <span className="icon">◆</span>
                   <span>
-                    Every customer, order, and conversation in one searchable
+                    Every contact, conversation, and task in one searchable
                     place
                   </span>
                 </li>
                 <li>
                   <span className="icon">◆</span>
                   <span>
-                    Routes auto-built in 90 seconds, pushed to the driver&apos;s
-                    phone
+                    Schedules and assignments in everyone&apos;s pocket,
+                    updated in real time
                   </span>
                 </li>
                 <li>
