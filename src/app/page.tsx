@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import IntakeForm from "@/components/IntakeForm";
 import {
   SHOW_CASES,
   CALENDLY_URL,
@@ -19,8 +20,6 @@ import {
 const priceFormatted = `$${(PRICE_USD / 1000).toFixed(0)}K`;
 
 export default function Home() {
-  const [sent, setSent] = useState(false);
-
   useEffect(() => {
     const io = new IntersectionObserver(
       (entries) => {
@@ -129,21 +128,16 @@ export default function Home() {
                 </span>
               </p>
               <div className="cta">
+                <a href="#intake" className="btn primary">
+                  Submit an inquiry →
+                </a>
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn primary"
-                >
-                  Message on WhatsApp →
-                </a>
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noreferrer"
                   className="btn ghost"
                 >
-                  Or book a call
+                  Or message on WhatsApp
                 </a>
               </div>
             </div>
@@ -830,21 +824,16 @@ export default function Home() {
             </div>
 
             <div className="price-cta">
+              <a href="#intake" className="btn primary">
+                Submit an inquiry →
+              </a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="btn primary"
-              >
-                Message on WhatsApp →
-              </a>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noreferrer"
                 className="btn ghost"
               >
-                Or book a call
+                Or message on WhatsApp
               </a>
               <span className="price-note">
                 Quick answer. No deck. No pitch. No pressure.
@@ -854,87 +843,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact">
+      {/* INTAKE */}
+      <section id="intake" className="section intake-section">
         <div className="wrap">
-          <div className="frame reveal">
-            <div className="c-head">
-              <div className="eyebrow">Get in touch</div>
-              <h2>
-                Send me a <span className="italic">message</span>.{" "}
-                <span className="amber">Let&apos;s see if we&apos;re a fit</span>.
-              </h2>
-              <p>
-                Text me on WhatsApp. Not a form. Not a funnel. My actual phone.
-                Tell me how your business runs today in a sentence or two. If
-                I can help, I&apos;ll say so. If I can&apos;t, I&apos;ll
-                point you somewhere that can.
-              </p>
-              <div className="c-actions">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn primary big"
-                >
-                  Message Zach on WhatsApp →
-                </a>
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn ghost"
-                >
-                  Or book a call
-                </a>
-              </div>
-            </div>
-            <div className="c-body single">
-              <aside className="c-aside">
-                <h4>
-                  What <span className="italic">happens</span> next.
-                </h4>
-                <div className="steps">
-                  <div className="step">
-                    <span className="w">Hour 00</span>
-                    <span>
-                      You message me on WhatsApp. I reply within the hour.
-                    </span>
-                  </div>
-                  <div className="step">
-                    <span className="w">Day 01</span>
-                    <span>
-                      Quick chat to size up the fit. No deck, no pitch.
-                    </span>
-                  </div>
-                  <div className="step">
-                    <span className="w">Day 02–04</span>
-                    <span>
-                      30-minute call. One-page scope written. Flat{" "}
-                      {priceFormatted} confirmed.
-                    </span>
-                  </div>
-                  <div className="step">
-                    <span className="w">Day 05</span>
-                    <span>
-                      You sign. You pay 50 percent. We kick off.
-                    </span>
-                  </div>
-                  <div className="step">
-                    <span className="w">Day 26</span>
-                    <span>
-                      First login. Real users, real data. Your custom app,
-                      live and yours.
-                    </span>
-                  </div>
-                </div>
-              </aside>
-            </div>
-            {sent && (
-              <div className="sent-banner">
-                ◆ Received. I&apos;ll reply within 24 hours. — {FOUNDER}
-              </div>
-            )}
+          <div className="sec-head reveal">
+            <div className="eyebrow">Submit an inquiry</div>
+            <h2>
+              Tell me about your <span className="italic">business</span>.{" "}
+              <span className="amber">Talk or type</span>.
+            </h2>
+            <p>
+              A few quick details, then describe what you need in your own
+              words. Easier to speak than to write? Tap the mic and I&apos;ll
+              transcribe it. I&apos;ll have a proposal drafted before our
+              first call.
+            </p>
+          </div>
+          <div className="reveal">
+            <IntakeForm />
           </div>
         </div>
       </section>
