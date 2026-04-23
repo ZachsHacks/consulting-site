@@ -63,7 +63,17 @@ export default function IntakeFormComponent({
   const analyzerRef = useRef<AnalyserNode | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const rafRef = useRef<number | null>(null);
+  const doneRef = useRef<HTMLDivElement | null>(null);
   const [amplitude, setAmplitude] = useState(0);
+
+  useEffect(() => {
+    if (submitted && doneRef.current) {
+      doneRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [submitted]);
 
   useEffect(() => {
     const SR =
@@ -244,7 +254,7 @@ export default function IntakeFormComponent({
 
   if (submitted) {
     return (
-      <div className="intake-done">
+      <div className="intake-done" ref={doneRef}>
         <div className="intake-eyebrow">Received</div>
         <h3 className="intake-done-h">
           Thanks, {form.name.split(" ")[0] || "friend"}.

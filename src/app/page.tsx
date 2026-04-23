@@ -871,8 +871,8 @@ export default function Home() {
       <footer>
         <div className="wrap">
           <div className="foot-big">
-            Built for <span className="italic">paper,</span>{" "}
-            <span className="amber">sweat, & family.</span>
+            Software that <span className="italic">actually</span>{" "}
+            <span className="amber">fits.</span>
           </div>
           <div className="foot-cols">
             <div>
