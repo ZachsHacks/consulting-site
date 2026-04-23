@@ -871,8 +871,9 @@ export default function Home() {
       <footer>
         <div className="wrap">
           <div className="foot-big">
-            Software that <span className="italic">actually</span>{" "}
-            <span className="amber">fits.</span>
+            An app built around how you{" "}
+            <span className="italic">actually</span>{" "}
+            <span className="amber">work.</span>
           </div>
           <div className="foot-cols">
             <div>
