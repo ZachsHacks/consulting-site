@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zach Weiss · Custom Software Studio",
+  title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
   description:
-    "Custom software for owner-operated businesses running on paper, spreadsheets, and group chats. I design, build, and ship the system your team actually uses.",
+    "Custom apps for owner-operated businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat. Book a free discovery call.",
 };
 
 export default function RootLayout({
