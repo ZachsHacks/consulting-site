@@ -14,6 +14,25 @@ type IntakeForm = {
   description: string;
 };
 
+function formatPhone(raw: string): string {
+  // Keep only digits, cap at 11 (longest US format with country code)
+  const digits = raw.replace(/\D/g, "").slice(0, 11);
+  if (!digits) return "";
+
+  // 11 digits leading with 1 → +1 (XXX) XXX-XXXX
+  if (digits.length === 11 && digits[0] === "1") {
+    return `+1 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+
+  // 10 or fewer digits → progressive US format
+  const area = digits.slice(0, 3);
+  const prefix = digits.slice(3, 6);
+  const line = digits.slice(6, 10);
+  if (digits.length <= 3) return `(${area}`;
+  if (digits.length <= 6) return `(${area}) ${prefix}`;
+  return `(${area}) ${prefix}-${line}`;
+}
+
 const INITIAL: IntakeForm = {
   name: "",
   company: "",
@@ -62,6 +81,7 @@ export default function IntakeFormComponent({
       interimResults: boolean;
       lang: string;
       onresult: (event: {
+        resultIndex: number;
         results: { isFinal: boolean; 0: { transcript: string } }[];
       }) => void;
       onerror: (event: { error: string }) => void;
@@ -75,9 +95,12 @@ export default function IntakeFormComponent({
     rec.lang = "en-US";
 
     rec.onresult = (event) => {
+      // Only process results new to this event. `event.results` is the full
+      // session history — iterating from 0 each event double/triple-counts
+      // finalized chunks and explodes the transcript.
       let finalText = "";
       let interim = "";
-      for (let i = 0; i < event.results.length; i++) {
+      for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
         if (result.isFinal) {
           finalText += result[0].transcript;
@@ -303,10 +326,14 @@ export default function IntakeFormComponent({
           <span>Phone / WhatsApp</span>
           <input
             value={form.phone}
-            onChange={(e) => handleChange("phone", e.target.value)}
+            onChange={(e) =>
+              handleChange("phone", formatPhone(e.target.value))
+            }
             placeholder="+1 (555) 555-5555"
             type="tel"
+            inputMode="tel"
             autoComplete="tel"
+            maxLength={20}
           />
         </label>
 
