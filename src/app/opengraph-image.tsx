@@ -158,8 +158,6 @@ export default async function Image() {
             marginTop: "auto",
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
-            gap: 24,
             zIndex: 2,
             paddingTop: 36,
             borderTop: "1px solid rgba(255,255,255,0.12)",
@@ -167,44 +165,15 @@ export default async function Image() {
         >
           <div
             style={{
-              fontSize: 20,
+              fontSize: 22,
               color: "#B8B3A8",
-              maxWidth: "68%",
+              maxWidth: "82%",
               lineHeight: 1.4,
               letterSpacing: "-0.005em",
             }}
           >
             For owner-operated businesses stuck on spreadsheets, paper, and
-            software from 2004.
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              gap: 10,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 56,
-                fontWeight: 900,
-                letterSpacing: "-0.05em",
-                color: "#FF8A3D",
-                lineHeight: 1,
-              }}
-            >
-              $25K
-            </span>
-            <span
-              style={{
-                fontSize: 14,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "#B8B3A8",
-              }}
-            >
-              flat
-            </span>
+            group chats.
           </div>
         </div>
       </div>

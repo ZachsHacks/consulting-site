@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
   description:
-    "Custom apps for owner-operated small businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat. Message on WhatsApp.",
+    "Custom apps for owner-operated small businesses stuck on spreadsheets, paper, and group chats. Built with AI, shipped in 21 days.",
   openGraph: {
     type: "website",
     url: SITE_URL,
     siteName: "Weiss & Co.",
     title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
     description:
-      "Custom apps for owner-operated small businesses stuck on ancient software. Built with AI. Shipped in 21 days. $25,000 flat.",
+      "Custom apps for owner-operated small businesses stuck on spreadsheets, paper, and group chats. Built with AI, shipped in 21 days.",
     images: [
       {
         url: "/opengraph-image",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Weiss & Co. · Custom apps, built with AI, shipped in 21 days",
     description:
-      "Custom apps for owner-operated small businesses. Built with AI. Shipped in 21 days. $25K flat.",
+      "Custom apps for owner-operated small businesses. Built with AI, shipped in 21 days.",
     images: ["/opengraph-image"],
   },
   icons: {
