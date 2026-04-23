@@ -114,6 +114,7 @@ nav.top .inner {
   font-size: 16px;
   letter-spacing: -0.02em;
   line-height: 1;
+  white-space: nowrap;
 }
 .mark .m2 {
   font-family: "JetBrains Mono", monospace;
@@ -148,6 +149,7 @@ nav.top .inner {
   background: var(--ink);
   color: var(--bg);
   transition: all 0.25s;
+  white-space: nowrap;
 }
 .nav-cta:hover {
   background: var(--amber);
@@ -197,31 +199,33 @@ nav.top .inner {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 580px) 1fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 680px) 1fr;
+  gap: 40px;
   align-items: center;
+  min-height: 640px;
 }
 .hero-backdrop {
+  align-self: stretch;
   width: 100%;
-  aspect-ratio: 1547 / 1032;
+  min-height: 100%;
   background-size: cover;
-  background-position: center center;
+  background-position: 55% 38%;
   background-repeat: no-repeat;
   filter: saturate(1.05) contrast(1.04);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.35) 15%,
-    rgba(0, 0, 0, 0.85) 28%,
-    #000 42%,
+    rgba(0, 0, 0, 0.3) 12%,
+    rgba(0, 0, 0, 0.8) 24%,
+    #000 38%,
     #000 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0, 0, 0, 0.35) 15%,
-    rgba(0, 0, 0, 0.85) 28%,
-    #000 42%,
+    rgba(0, 0, 0, 0.3) 12%,
+    rgba(0, 0, 0, 0.8) 24%,
+    #000 38%,
     #000 100%
   );
 }
@@ -236,6 +240,7 @@ nav.top .inner {
 .hero h1 .line {
   display: block;
   padding: 2px 0;
+  white-space: nowrap;
 }
 .hero h1 .chip {
   display: inline-block;
@@ -1530,12 +1535,43 @@ footer {
   .navlinks {
     display: none;
   }
+  nav.top .inner {
+    gap: 16px;
+    height: 64px;
+  }
+  .mark .m2 {
+    display: none;
+  }
+  .nav-cta {
+    padding: 9px 14px;
+    font-size: 12.5px;
+  }
+  .hero {
+    padding: 96px 0 40px;
+  }
   .hero-grid,
   .compare,
   .method-grid,
   .c-body {
     grid-template-columns: 1fr !important;
     gap: 36px !important;
+    min-height: 0 !important;
+  }
+  .hero h1 .line {
+    white-space: normal;
+  }
+  .hero .cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero .cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-backdrop {
+    aspect-ratio: 1547 / 1032;
+    min-height: 0;
   }
   .services {
     grid-template-columns: 1fr;
