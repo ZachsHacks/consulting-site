@@ -67,14 +67,13 @@ export default function ClarkProposal() {
         </div>
 
         <section className="p-section preamble">
-          <div className="preamble-label">A note on what you noticed</div>
+          <div className="preamble-label">Funny thing</div>
           <p>
-            You opened my site and saw your business. That&apos;s not a
-            coincidence, and it&apos;s not lifted. We&apos;ve independently
-            landed on the same thesis — custom internal tools, flat $25K,
-            shipped in 21 days on the AI stack — from different sides of the
-            table. That&apos;s the argument for this proposal, not against
-            it. What follows is how we combine.
+            Before we met I was already running this exact motion solo. Same
+            flat $25K, same 21 days, same AI stack. You landed on the thesis
+            from the distribution side. I landed there from the operator
+            side. Which is the whole argument for this being a partnership,
+            not a competition.
           </p>
         </section>
 
@@ -202,16 +201,15 @@ export default function ClarkProposal() {
               My reply · within 2 hours of any response
             </div>
             <p>
-              &ldquo;[First name], thanks for writing back. Based on what you
-              said, it sounds like [the specific thing they mentioned] is the
-              thing eating time. I build one custom tool at a time for
-              owner-operators in 21 days.&rdquo;
+              &ldquo;Hey [first name], saw your note. Yeah,
+              [what they mentioned] is exactly the thing I fix. I build one
+              custom tool at a time for operators like you, 21 days, flat
+              $25K.&rdquo;
             </p>
             <p>
-              &ldquo;One option: 15-minute call this week to see if a 21-day
-              build makes sense here. If it does, we scope on the call. If it
-              doesn&apos;t, I&apos;ll point you somewhere useful. Either way
-              the call costs nothing.&rdquo;
+              &ldquo;Got 15 minutes this week to see if there&apos;s a fit?
+              If not, I&apos;ll point you somewhere useful. Either way the
+              call costs nothing.&rdquo;
             </p>
           </div>
         </section>
@@ -297,31 +295,27 @@ export default function ClarkProposal() {
             <div className="p-phase">
               <div className="p-phase-when">Month 12</div>
               <p>
-                Eight to twelve named case studies from the LP-network
-                builds. Proprietary data on which internal tools actually get
-                used. A recognized brand in the AI-native internal-tools
-                category inside the frum operator world, before Retool and
-                Vercel go full self-serve.
+                8 to 12 named case studies from the LP network. Real data on
+                which internal tools actually get used. A recognized brand in
+                the AI-native internal-tools category inside the frum
+                operator world, before Retool and Vercel go full self-serve.
               </p>
             </div>
             <div className="p-phase">
               <div className="p-phase-when">Month 18</div>
               <p>
-                Transition from pure services to semi-productized. Template
-                library for the five most-recurring tool types. Fee per
-                engagement holds flat. Margin increases because build time
+                Start productizing. Template library for the top 5 recurring
+                tool types. Same flat fee. Fatter margin because build time
                 drops.
               </p>
             </div>
             <div className="p-phase highlight">
               <div className="p-phase-when">Month 24</div>
               <p>
-                Productized platform on top of the template library. The
-                moat we&apos;ve been compounding becomes a real asset.
-                We&apos;re no longer selling engagements. We&apos;re selling
-                licenses to what we built. The marginal build cost drops to
-                a few hundred dollars in API calls. The flywheel is running
-                on its own.
+                Platform with a template marketplace on top. We&apos;re
+                selling licenses, not engagements. Marginal build cost drops
+                to a couple hundred bucks in API calls. Flywheel running on
+                its own.
               </p>
             </div>
           </div>
