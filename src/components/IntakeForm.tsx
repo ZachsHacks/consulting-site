@@ -265,7 +265,7 @@ export default function IntakeFormComponent({
           <input
             value={form.name}
             onChange={(e) => handleChange("name", e.target.value)}
-            placeholder="Moshe Weiss"
+            placeholder="David Cohen"
             autoComplete="name"
             required
           />
@@ -276,7 +276,7 @@ export default function IntakeFormComponent({
           <input
             value={form.company}
             onChange={(e) => handleChange("company", e.target.value)}
-            placeholder="Weiss Distribution, LLC"
+            placeholder="Cohen & Sons"
             autoComplete="organization"
           />
         </label>
