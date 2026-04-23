@@ -126,15 +126,16 @@ export default async function Image() {
                 color: "#1A0B04",
                 padding: "2px 20px",
                 borderRadius: 18,
-                display: "inline-flex",
+                display: "flex",
               }}
             >
               Custom
             </span>
             <span>apps,</span>
           </div>
-          <div>
-            built with <span style={{ color: "#FF8A3D" }}>AI,</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <span>built with</span>
+            <span style={{ color: "#FF8A3D" }}>AI,</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <span>shipped in</span>
@@ -143,7 +144,7 @@ export default async function Image() {
                 border: "3px solid #F5F2EC",
                 padding: "2px 20px",
                 borderRadius: 18,
-                display: "inline-flex",
+                display: "flex",
               }}
             >
               21 days.

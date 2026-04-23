@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <div className="navlinks">
             <a href="#services">Services</a>
-            <a href="#compare">Why now</a>
+            <a href="#about">About</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
           </div>
@@ -108,11 +108,11 @@ export default function Home() {
                 </span>
               </h1>
               <p className="lede">
-                AI lets me build faster than any agency can quote. If your
-                team is buried in <b>spreadsheets</b>, running on{" "}
-                <b>software from 2004</b>, or patching the gaps with{" "}
-                <b>WhatsApp</b>, I build the custom app that replaces all of
-                it. <span className="u">Shipped in 21 days. Yours to own.</span>
+                One custom app, built around how your business actually runs.{" "}
+                <b>Shipped in 21 days. $25,000 flat.</b>{" "}
+                <span className="u">
+                  You own every line when I walk away.
+                </span>
               </p>
               <div className="cta">
                 <a
@@ -207,97 +207,94 @@ export default function Home() {
           <div className="sec-head reveal">
             <div className="eyebrow">What I build</div>
             <h2>
-              One custom app. <span className="italic">Wired</span>{" "}
-              <span className="amber">end to end</span>.
+              Six things your business
+              <br />
+              <span className="italic">actually</span>{" "}
+              <span className="amber">needs</span>.
             </h2>
             <p>
               Not a stack of SaaS seats. Not a dashboard on top of a
-              spreadsheet. The one system your team opens at 7 a.m., built
-              around how your business actually runs.
+              spreadsheet. One custom app built around how your shop already
+              works, opened every morning by the people who run it.
             </p>
           </div>
           <div className="services reveal">
             <article className="service">
-              <div className="num">S.01 / The main app</div>
+              <div className="num">S.01 / Field & floor</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  Custom internal <span className="italic">platforms</span>
+                  Route & <span className="italic">dispatch</span>
                 </h3>
                 <p>
-                  Orders, customers, payments, scheduling, inventory, dispatch.
-                  One login. One source of truth. Replaces the Frankenstein of
-                  spreadsheets and SaaS seats you run on now.
+                  Kill the 5am whiteboard. Drivers get the day on a phone.
+                  You get a live map.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.02 / Background work</div>
+              <div className="num">S.02 / Intake</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  Workflow <span className="italic">automation</span>
+                  Order <span className="italic">intake</span>
                 </h3>
                 <p>
-                  Invoices, lead routing, reminders, reports. The repetitive
-                  tasks that eat your team&apos;s day run automatically,
-                  overnight. You keep the output. You lose the drudgery.
+                  Customers order on a link, not a screenshot. Inventory
+                  updates itself.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.03 / Intelligence</div>
+              <div className="num">S.03 / Office</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  AI <span className="italic">agents</span>
+                  Back-office <span className="italic">tools</span>
                 </h3>
                 <p>
-                  Custom agents that do real work. Research, drafting, data
-                  extraction, customer outreach. Not a chatbot. A purpose-built
-                  operator that never sleeps.
+                  One tool your office manager stops quitting over. The
+                  spreadsheets, stickies, and three-tab workflows, gone.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.04 / Connective tissue</div>
+              <div className="num">S.04 / Customers</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  System <span className="italic">integration</span>
+                  Custom <span className="italic">CRM</span>
                 </h3>
                 <p>
-                  Your CRM, accounting, email, and internal tools wired into
-                  one pipeline. Data flows where it needs to. Nothing falls
-                  through the cracks.
+                  Not Salesforce. Not Monday. Yours. Built around how your
+                  shop actually sells, not how a VC in San Francisco thinks
+                  you should.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.05 / Field & floor</div>
+              <div className="num">S.05 / Cash flow</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  Driver & field <span className="italic">apps</span>
+                  Billing & <span className="italic">invoicing</span>
                 </h3>
                 <p>
-                  Built for the phone in the warehouse, the truck, the
-                  kitchen. Fast, offline-tolerant, one-thumb usable by someone
-                  who isn&apos;t sitting at a desk.
+                  Invoices fire the second a job closes. Stripe, ACH, or on
+                  account. No more midnight typing.
                 </p>
               </div>
             </article>
             <article className="service">
-              <div className="num">S.06 / Handover</div>
+              <div className="num">S.06 / Control</div>
               <div className="chevron">→</div>
               <div>
                 <h3>
-                  You <span className="italic">own</span> it
+                  Owner <span className="italic">dashboard</span>
                 </h3>
                 <p>
-                  Code, data, accounts, domain. Fully yours. I stay on
-                  retainer if you want me. If you don&apos;t, I hand over the
-                  keys and walk. Nothing held hostage.
+                  Revenue, open jobs, A/R, who owes you what. The number you
+                  need to see before Shabbos.
                 </p>
               </div>
             </article>
@@ -444,16 +441,16 @@ export default function Home() {
       <section id="compare" className="section">
         <div className="wrap">
           <div className="sec-head reveal">
-            <div className="eyebrow">The future is now</div>
+            <div className="eyebrow">Before & after</div>
             <h2>
-              Adapt <span className="italic">with AI</span>, or get left{" "}
-              <span className="amber">behind</span>.
+              What your business looks like on{" "}
+              <span className="italic">day</span>{" "}
+              <span className="amber">22</span>.
             </h2>
             <p>
-              The owner-operators winning right now aren&apos;t working
-              harder. They&apos;re shipping one custom tool that does what ten
-              SaaS seats used to, built with AI in 21 days. The ones still on
-              software from 2004 are already falling behind.
+              The shops winning right now aren&apos;t working harder.
+              They&apos;re running on one tool that does the job of ten, built
+              around how they actually work, owned outright.
             </p>
           </div>
           <div className="compare reveal">
@@ -464,27 +461,32 @@ export default function Home() {
               <ul>
                 <li>
                   <span className="icon">×</span>
-                  <span>Software from 2004 running the entire business</span>
+                  <span>Software from 2015 that one ex-employee built</span>
                 </li>
                 <li>
                   <span className="icon">×</span>
-                  <span>Five WhatsApp threads per customer</span>
+                  <span>WhatsApp threads doing the work of a CRM</span>
                 </li>
                 <li>
                   <span className="icon">×</span>
-                  <span>Paper, clipboards, and a whiteboard at 5 a.m.</span>
+                  <span>
+                    Whiteboard route planning at 5am, redone by hand every
+                    time a driver calls out
+                  </span>
                 </li>
                 <li>
                   <span className="icon">×</span>
-                  <span>Invoices typed by hand, one by one</span>
+                  <span>
+                    Spreadsheets you can&apos;t trust, edited by four people
+                  </span>
                 </li>
                 <li>
                   <span className="icon">×</span>
-                  <span>Every new process means another SaaS seat</span>
+                  <span>Invoices typed by hand, one by one, at night</span>
                 </li>
                 <li>
                   <span className="icon">×</span>
-                  <span>Scaling means hiring more admin staff</span>
+                  <span>An office manager stretched thinner every year</span>
                 </li>
               </ul>
             </div>
@@ -495,15 +497,28 @@ export default function Home() {
               <ul>
                 <li>
                   <span className="icon">◆</span>
-                  <span>One custom app doing the work of ten SaaS tools</span>
+                  <span>
+                    Modern stack you own outright. Any developer can pick it
+                    up.
+                  </span>
                 </li>
                 <li>
                   <span className="icon">◆</span>
-                  <span>Every customer touchpoint logged in one place</span>
+                  <span>
+                    Every customer, order, and conversation in one searchable
+                    place
+                  </span>
                 </li>
                 <li>
                   <span className="icon">◆</span>
-                  <span>Automated dispatch and routing in the driver&apos;s hand</span>
+                  <span>
+                    Routes auto-built in 90 seconds, pushed to the driver&apos;s
+                    phone
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">◆</span>
+                  <span>One source of truth. One database. One login.</span>
                 </li>
                 <li>
                   <span className="icon">◆</span>
@@ -511,14 +526,79 @@ export default function Home() {
                 </li>
                 <li>
                   <span className="icon">◆</span>
-                  <span>New workflows added in days, built with AI</span>
-                </li>
-                <li>
-                  <span className="icon">◆</span>
-                  <span>Scaling means one more seat, not one more hire</span>
+                  <span>
+                    An office manager with an afternoon again.
+                  </span>
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="section">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <div className="eyebrow">About</div>
+            <h2>
+              One builder. <span className="italic">One</span> client{" "}
+              <span className="amber">at a time</span>.
+            </h2>
+          </div>
+          <div className="about-grid reveal">
+            <div className="about-body">
+              <p>
+                I&apos;m Zach Weiss. <b>Brandeis CS</b>, ex-backend engineer
+                at <b>Carbon Black</b>, Brooklyn-based, and frum.
+              </p>
+              <p>
+                I build one custom app for one business at a time. No agency
+                layers. No offshore handoffs. No account manager who schedules
+                calls with the person actually writing code. You work with the
+                builder directly, start to finish.
+              </p>
+              <p>
+                Modern AI tools let one person out-ship a ten-person team. You
+                get the work of an agency in 21 days, at a fraction of the
+                cost, handed over with every password, every repo, and every
+                account in your name.
+              </p>
+              <p>
+                I answer my own phone. You text me directly.
+              </p>
+            </div>
+            <aside className="about-card">
+              <div className="about-card-label">Credentials</div>
+              <ul>
+                <li>
+                  <span className="k">Education</span>
+                  <span className="v">Brandeis University, BS Computer Science</span>
+                </li>
+                <li>
+                  <span className="k">Prior work</span>
+                  <span className="v">
+                    Backend engineer, Carbon Black (cybersecurity)
+                  </span>
+                </li>
+                <li>
+                  <span className="k">Based</span>
+                  <span className="v">Brooklyn, NY · frum community</span>
+                </li>
+                <li>
+                  <span className="k">Model</span>
+                  <span className="v">
+                    Solo. One client at a time. You work with me directly.
+                  </span>
+                </li>
+                <li>
+                  <span className="k">Stack</span>
+                  <span className="v">
+                    Next.js, Supabase, Prisma, n8n, Claude, Stripe, Twilio
+                  </span>
+                </li>
+              </ul>
+            </aside>
           </div>
         </div>
       </section>
@@ -529,7 +609,7 @@ export default function Home() {
           <div className="sec-head reveal">
             <div className="eyebrow">How it works</div>
             <h2>
-              Sit. Learn. <span className="italic">Build.</span> Ship.{" "}
+              Diagnose. Spec. <span className="italic">Build.</span> Train.{" "}
               <span className="amber">Hand over.</span>
             </h2>
           </div>
@@ -539,70 +619,68 @@ export default function Home() {
                 <div className="p">Phase I</div>
                 <div>
                   <div className="t">
-                    Sit with the <span className="italic">owner</span>.
+                    <span className="italic">Diagnose</span>.
                   </div>
                   <div className="d">
-                    Half a day on-site or on a call. I watch how the business
-                    actually runs. Not what the org chart says. Not what the
-                    manager thinks. The real flow from order to cash.
+                    One 45-minute call where I watch how your business
+                    actually runs, not how the org chart says it does.
                   </div>
                 </div>
-                <div className="w">Day 01</div>
+                <div className="w">Day 00</div>
               </div>
               <div className="phase">
                 <div className="p">Phase II</div>
                 <div>
                   <div className="t">
-                    Find the <span className="italic">one painful thing</span>.
+                    <span className="italic">Spec</span>.
                   </div>
                   <div className="d">
-                    Every business has a thing everyone in it hates. I find
-                    it, scope it, and build it first. Prove value fast before
-                    scope creeps.
+                    I write a plain-English document of what I&apos;m building,
+                    what I&apos;m not, and what it&apos;ll do on day 22. You
+                    sign it.
                   </div>
                 </div>
-                <div className="w">Day 02–03</div>
+                <div className="w">Days 01–03</div>
               </div>
               <div className="phase">
                 <div className="p">Phase III</div>
                 <div>
                   <div className="t">
-                    Ship a working <span className="italic">v1</span>.
+                    <span className="italic">Build</span> in public.
                   </div>
                   <div className="d">
-                    Real users, real data, real workflow. Not a slide deck.
-                    Not a demo. A working app your team opens Monday morning.
+                    Daily Loom video. Live staging link. WhatsApp me anytime.
+                    No black box.
                   </div>
                 </div>
-                <div className="w">Day 04–21</div>
+                <div className="w">Days 04–17</div>
               </div>
               <div className="phase">
                 <div className="p">Phase IV</div>
                 <div>
                   <div className="t">
-                    Wire in the <span className="italic">rest</span>.
+                    <span className="italic">Train</span> the team.
                   </div>
                   <div className="d">
-                    Once v1 is proving itself, layer on automations,
-                    integrations, and AI agents. Added as the team grows into
-                    them, not all at once.
+                    Your team uses it before it&apos;s live. We fix the
+                    friction they find, not the friction I imagine.
                   </div>
                 </div>
-                <div className="w">Ongoing</div>
+                <div className="w">Days 18–20</div>
               </div>
               <div className="phase">
                 <div className="p">Phase V</div>
                 <div>
                   <div className="t">
-                    Hand over the <span className="italic">keys</span>.
+                    <span className="italic">Hand</span> over the keys.
                   </div>
                   <div className="d">
-                    Code, data, accounts, domain. All yours. I stay on
-                    retainer if you want me. If you don&apos;t, full handoff,
-                    clean exit. Nothing held hostage.
+                    Repo transferred. Domains pointed. Passwords in your
+                    vault. I&apos;m on call 30 days. Then the app is yours,
+                    alone, forever.
                   </div>
                 </div>
-                <div className="w">Yours</div>
+                <div className="w">Day 21</div>
               </div>
             </div>
             <aside className="method-card reveal">
@@ -668,32 +746,72 @@ export default function Home() {
               <div className="price-col">
                 <div className="price-col-head">What&apos;s included</div>
                 <ul>
-                  <li>Half-day intake session, on-site or on a call</li>
-                  <li>Complete custom app, deployed and running</li>
-                  <li>Admin dashboard, driver app, or field app as scoped</li>
-                  <li>Up to three external integrations (Stripe, Twilio, etc.)</li>
-                  <li>AI agents where they earn their keep</li>
-                  <li>All code, data, accounts, and domain under your name</li>
+                  <li>
+                    Discovery call + written spec signed off before a line of
+                    code
+                  </li>
+                  <li>
+                    Full custom app on a modern portable stack (Next.js,
+                    Supabase, Prisma, n8n, Claude, Stripe, Twilio)
+                  </li>
+                  <li>
+                    Deployed to your domain, your Vercel, your Supabase, your
+                    Stripe. Your accounts, not mine.
+                  </li>
+                  <li>
+                    Every line of source code in a GitHub repo under your
+                    name, day one
+                  </li>
+                  <li>
+                    Team training, written docs, and a Loom walkthrough for
+                    your office manager
+                  </li>
+                  <li>30 days of post-launch bug fixes at no extra cost</li>
                 </ul>
               </div>
               <div className="price-col">
                 <div className="price-col-head">How payment works</div>
                 <ul>
                   <li>
-                    <b>50%</b> at kickoff
+                    <b>50%</b> on signature. Holds your slot, kicks off
+                    discovery.
                   </li>
                   <li>
-                    <b>50%</b> at delivery
+                    <b>50%</b> on delivery. On working software, not on a
+                    go-live promise.
                   </li>
                   <li>
                     <b>
                       ${RETAINER_MIN}&ndash;${RETAINER_MAX}/mo
                     </b>{" "}
-                    retainer for hosting, API costs, and minor iteration
+                    optional retainer for hosting, API costs, and tweaks.
+                    Cancel anytime.
                   </li>
-                  <li>Post-launch changes billed at $175/hr or rolled into retainer</li>
+                  <li>
+                    Post-launch changes billed at $175/hr or rolled into
+                    retainer
+                  </li>
                   <li>Major new features scoped as a separate v2</li>
                 </ul>
+              </div>
+            </div>
+
+            <div className="price-extras">
+              <div className="price-extra">
+                <div className="price-extra-label">The math</div>
+                <p>
+                  A $4K/month SaaS stack is $48K a year. Every year. Forever.
+                  And you don&apos;t own it. This app is $25K once. You break
+                  even in six months, and you compound from there.
+                </p>
+              </div>
+              <div className="price-extra">
+                <div className="price-extra-label">Risk reversal</div>
+                <p>
+                  If I don&apos;t ship a working app in 21 days from kickoff,
+                  your deposit comes back. Not store credit. A wire. I&apos;d
+                  rather eat the loss than drag a build into month three.
+                </p>
               </div>
             </div>
 
@@ -727,16 +845,16 @@ export default function Home() {
         <div className="wrap">
           <div className="frame reveal">
             <div className="c-head">
-              <div className="eyebrow">Get started</div>
+              <div className="eyebrow">Get in touch</div>
               <h2>
-                Ready to kill your <span className="italic">most painful</span>{" "}
-                <span className="amber">workflow</span>?
+                Send me a <span className="italic">message</span>.{" "}
+                <span className="amber">Let&apos;s see if we&apos;re a fit</span>.
               </h2>
               <p>
-                Book a free 30-minute discovery call. No deck, no pitch. I ask
-                questions about how your business actually runs today. If
-                it&apos;s a fit, we scope. If it isn&apos;t, I&apos;ll point
-                you somewhere that is.
+                Text me on WhatsApp. Not a form. Not a funnel. My actual phone.
+                Tell me how your business runs today in a sentence or two. If
+                I can help, I&apos;ll say so. If I can&apos;t, I&apos;ll
+                point you somewhere that can.
               </p>
               <div className="c-actions">
                 <a
@@ -811,8 +929,8 @@ export default function Home() {
       <footer>
         <div className="wrap">
           <div className="foot-big">
-            <span className="italic">Let&apos;s</span> build{" "}
-            <span className="amber">something.</span>
+            Built for <span className="italic">paper,</span>{" "}
+            <span className="amber">sweat, & family.</span>
           </div>
           <div className="foot-cols">
             <div>
