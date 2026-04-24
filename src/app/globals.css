@@ -2129,6 +2129,186 @@ footer {
   }
 }
 
+/* ——— PROPOSAL UNLOCK ——— */
+.proposal-unlock {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background: var(--bg);
+}
+.unlock-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 44px 40px 36px;
+  border-radius: 22px;
+  background:
+    linear-gradient(160deg, rgba(255, 138, 61, 0.06), transparent 60%),
+    var(--card);
+  border: 1px solid var(--hair-2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.unlock-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 61, 0.18),
+    transparent 60%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
+.unlock-mark {
+  position: relative;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 24px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--amber), #c8571e);
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  color: #1a0b04;
+}
+.unlock-eyebrow {
+  position: relative;
+  z-index: 2;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.unlock-h {
+  position: relative;
+  z-index: 2;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+}
+.unlock-h .italic {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--amber);
+}
+.unlock-sub {
+  position: relative;
+  z-index: 2;
+  color: var(--ink-2);
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin: 0 0 28px;
+  letter-spacing: -0.005em;
+}
+.unlock-form {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.unlock-form input {
+  width: 100%;
+  background: rgba(10, 10, 11, 0.6);
+  border: 1px solid var(--hair-2);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+.unlock-form input::placeholder {
+  color: var(--mute);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.unlock-form input:focus {
+  outline: none;
+  border-color: color-mix(in oklab, var(--amber) 65%, var(--hair-2));
+  background: rgba(10, 10, 11, 0.8);
+}
+.unlock-btn {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--amber);
+  color: #1a0b04;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition:
+    background 0.25s,
+    transform 0.2s,
+    box-shadow 0.25s;
+  box-shadow:
+    0 6px 20px -6px rgba(255, 138, 61, 0.5),
+    0 2px 6px -2px rgba(255, 138, 61, 0.3);
+}
+.unlock-btn:hover:not(:disabled) {
+  background: var(--amber-2);
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 28px -8px rgba(255, 138, 61, 0.65),
+    0 0 0 6px rgba(255, 138, 61, 0.14);
+}
+.unlock-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.unlock-error {
+  position: relative;
+  z-index: 2;
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: rgba(230, 74, 46, 0.08);
+  border: 1px solid rgba(230, 74, 46, 0.3);
+  border-radius: 10px;
+  color: #ffb4a6;
+  font-size: 13.5px;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
+.unlock-hint {
+  position: relative;
+  z-index: 2;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hair-2);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
 /* ——— PROPOSAL PAGES ——— */
 .proposal {
   position: relative;
