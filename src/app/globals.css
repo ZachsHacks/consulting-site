@@ -2385,9 +2385,9 @@ footer {
 /* Ryan proposal: a wider reading column so it sits better against the
    full-width header on large screens. Scoped so Clark is unaffected. */
 .proposal-ryan .proposal-body {
-  max-width: 920px;
-  padding-left: clamp(24px, 6vw, 72px);
-  padding-right: clamp(24px, 6vw, 72px);
+  max-width: 1600px;
+  padding-left: clamp(24px, 4vw, 64px);
+  padding-right: clamp(24px, 4vw, 64px);
 }
 .proposal-hero {
   padding: 32px 0 64px;
