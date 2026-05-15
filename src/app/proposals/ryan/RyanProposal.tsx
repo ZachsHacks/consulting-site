@@ -66,16 +66,6 @@ export default function RyanProposal() {
           <div className="proposal-byline">Zach Weiss</div>
         </div>
 
-        <section className="p-section preamble">
-          <div className="preamble-label">Funny thing</div>
-          <p>
-            We already built and shipped together once, so this part is easy.
-            You already know how I work, and I already know your operation.
-            This time it is something bigger, so let me just show you the
-            system.
-          </p>
-        </section>
-
         <section className="p-section">
           <div className="p-num">§ 01</div>
           <h2>
