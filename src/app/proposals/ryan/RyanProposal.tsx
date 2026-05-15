@@ -69,10 +69,10 @@ export default function RyanProposal() {
         <section className="p-section preamble">
           <div className="preamble-label">Funny thing</div>
           <p>
-            We already built and shipped together once. You came back with
-            something bigger. That is the whole reason this proposal is short.
-            You already know how I work, and I already know your operation. So
-            let me just show you the system.
+            We already built and shipped together once, so this part is easy.
+            You already know how I work, and I already know your operation.
+            This time it is something bigger, so let me just show you the
+            system.
           </p>
         </section>
 
@@ -274,7 +274,8 @@ export default function RyanProposal() {
             <div className="ry-price-now">
               <span className="ry-price-big">$5,000</span>
               <span className="ry-price-note">
-                Because you came back. <span className="italic">Half.</span>
+                Because of our history together.{" "}
+                <span className="italic">Half.</span>
               </span>
             </div>
             <p className="ry-price-ask">
