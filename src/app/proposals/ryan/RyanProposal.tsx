@@ -11,7 +11,7 @@ const PREPARED_DATE = "May 15, 2026";
 const RYAN_WA_URL =
   "https://wa.me/12243688111?text=" +
   encodeURIComponent(
-    "Ryan here. Read the proposal. I'm in, let's kick off Phase 1."
+    "Ryan here. I'm in. Let's kick off Phase 1."
   );
 
 export default function RyanProposal() {
@@ -266,33 +266,39 @@ export default function RyanProposal() {
               </p>
             </div>
           </div>
-          <p className="mt">
-            Full build, end to end:{" "}
-            <span className="amber-bold">$10,000</span>. That number is honest.
-            It is less than three months of the time this hands back to you.
-          </p>
-          <div className="p-callout">
-            <p>
-              Because you came back, your rate is{" "}
-              <span className="amber-bold">$5,000</span>. Half. The only thing
-              I ask in return: introduce me to one or two operators who would
-              put a system like this to work. That is the entire deal.
+          <div className="ry-price">
+            <div className="ry-price-head">
+              <span className="ry-price-label">Full build, every phase</span>
+              <span className="ry-price-was">$10,000</span>
+            </div>
+            <div className="ry-price-now">
+              <span className="ry-price-big">$5,000</span>
+              <span className="ry-price-note">
+                Because you came back. <span className="italic">Half.</span>
+              </span>
+            </div>
+            <p className="ry-price-ask">
+              $10,000 is the honest number, less than three months of the time
+              this hands back to you. You pay half. The only thing I ask in
+              return: introduce me to one or two operators who would put a
+              system like this to work. That is the entire deal.
             </p>
           </div>
           <ul className="mt">
             <li>
-              <b>Retainer:</b> $500 a month once Phase 1 is live. Hosting,
+              <b>Payment, dead simple.</b> $2,500 to start, $2,500 at the
+              finish. The finish is the whole system done and running: core
+              functionality live and the manager dashboard up. That is the
+              entire $5,000. No phase-by-phase invoicing to chase.
+            </li>
+            <li>
+              <b>Retainer:</b> $500 a month once the build is live. Hosting,
               monitoring, new metrics, new techs, prompt tuning, next-day
               support. The first month is on me.
             </li>
             <li>
               <b>Usage at cost.</b> AI, voice, and hosting billed at what they
               cost. No markup, no surprises.
-            </li>
-            <li>
-              <b>Clean terms.</b> Half to start a phase, half when you accept
-              it. The Phase 1 deposit starts the clock. You approve each phase
-              on its own. You are never locked into the whole thing.
             </li>
           </ul>
         </section>
@@ -302,7 +308,10 @@ export default function RyanProposal() {
           <h2>
             What I need <span className="italic">from you</span>.
           </h2>
-          <p>Four things unlock Phase 1. None of them are heavy.</p>
+          <p>
+            Four things unlock Phase 1. None of them are heavy. Let&apos;s
+            lock them down right here on the call.
+          </p>
           <ul>
             <li>
               <b>Tableau access.</b> Can we pull the export with an API key or
@@ -316,7 +325,7 @@ export default function RyanProposal() {
             </li>
             <li>
               <b>The bonus tiers, and one real message you send today.</b> You
-              mentioned both on the call. Those two are what make the coaching
+              mentioned both last time. Those two are what make the coaching
               sound like you.
             </li>
             <li>
@@ -333,15 +342,13 @@ export default function RyanProposal() {
             What happens <span className="italic">next</span>.
           </h2>
           <p className="ask-body">
-            <b>Approve Phase 1 and the deposit. That starts everything.</b>
+            <b>Green light it on this call. The $2,500 deposit starts
+            everything.</b>
           </p>
           <ul className="ask-list">
-            <li>
-              Noon your time Monday, the call we already set, to clear the
-              Tableau question.
-            </li>
-            <li>The one or two intros, whenever they are ready.</li>
-            <li>Phase 1 live within about a week of getting access.</li>
+            <li>Right here, on this call: lock how I get the Tableau data.</li>
+            <li>The one or two intros, this week.</li>
+            <li>Phase 1 live within about a week of access.</li>
           </ul>
           <p className="ask-body">
             You build the reward. I build the coach. Together that is a machine
@@ -366,7 +373,7 @@ export default function RyanProposal() {
             rel="noreferrer"
             className="btn ghost"
           >
-            Or grab the Monday slot
+            Or book the kickoff session
           </a>
         </div>
       </article>
