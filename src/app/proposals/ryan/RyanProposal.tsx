@@ -41,7 +41,7 @@ export default function RyanProposal() {
   }, []);
 
   return (
-    <div className="proposal">
+    <div className="proposal proposal-ryan">
       <header className="proposal-header">
         <a href="/" className="proposal-mark" aria-label="Back to Weiss & Co.">
           <span className="logo-sq">W&amp;</span>
