@@ -73,7 +73,7 @@ export default function RyanProposal() {
           </h2>
           <div className="p-two-col">
             <div>
-              <h3>The lift today</h3>
+              <h3>Right now</h3>
               <p>
                 You open Tableau. You run the report. You export to Excel. You
                 copy and paste one technician&apos;s numbers, post them in
@@ -93,6 +93,12 @@ export default function RyanProposal() {
               </p>
             </div>
           </div>
+          <p className="mt">
+            One more thing: if this works the way I think it will, I am going
+            to ask you to introduce me to one or two operators who would put a
+            system like this to work. That is the only other thing I want out
+            of this. More on that below.
+          </p>
         </section>
 
         <section className="p-section">
@@ -111,7 +117,7 @@ export default function RyanProposal() {
               <span className="l">Techs coached every day, on autopilot</span>
             </div>
             <div className="p-stat">
-              <span className="v">Weeks</span>
+              <span className="v">4 to 6 weeks</span>
               <span className="l">Before it has paid for itself</span>
             </div>
           </div>
@@ -166,7 +172,7 @@ export default function RyanProposal() {
           </p>
           <div className="p-timeline">
             <div className="p-phase">
-              <div className="p-phase-when">Phase 1</div>
+              <div className="p-phase-when">Phase 1 · ~1 week from access</div>
               <p>
                 One metric, Daily Completion Rate. One pipeline, Tableau to
                 Telegram. Tested on you, a dummy tech, and two real techs
@@ -174,7 +180,7 @@ export default function RyanProposal() {
               </p>
             </div>
             <div className="p-phase">
-              <div className="p-phase-when">Phase 2</div>
+              <div className="p-phase-when">Phase 2 · ~2 weeks after Phase 1</div>
               <p>
                 The other two core metrics. Day, month, quarter, and year to
                 date. A one-tap Reviewed button so you know exactly who
@@ -182,7 +188,7 @@ export default function RyanProposal() {
               </p>
             </div>
             <div className="p-phase">
-              <div className="p-phase-when">Phase 3</div>
+              <div className="p-phase-when">Phase 3 · ~2 weeks after Phase 2</div>
               <p>
                 Coaching that reads across every metric and the notes.
                 Bonus-tier nudges that tell a tech he is two points from the
@@ -190,7 +196,7 @@ export default function RyanProposal() {
               </p>
             </div>
             <div className="p-phase highlight">
-              <div className="p-phase-when">Phase 4</div>
+              <div className="p-phase-when">Phase 4 · ~1 to 2 weeks after Phase 3</div>
               <p>
                 Your dashboard. The bird&apos;s-eye view. Leaderboard, every
                 tech, who is engaging, who is sliding, across the whole
@@ -270,17 +276,17 @@ export default function RyanProposal() {
             </div>
             <p className="ry-price-ask">
               $10,000 is the honest number, less than three months of the time
-              this hands back to you. You pay half. The only thing I ask in
-              return: introduce me to one or two operators who would put a
-              system like this to work. That is the entire deal.
+              this hands back to you. You pay half. You know who those people
+              are. The only thing I ask in return: introduce me to one or two
+              operators who would put a system like this to work. That is the
+              entire deal.
             </p>
           </div>
           <ul className="mt">
             <li>
               <b>Payment, dead simple.</b> $2,500 to start, $2,500 at the
-              finish. The finish is the whole system done and running: core
-              functionality live and the manager dashboard up. That is the
-              entire $5,000. No phase-by-phase invoicing to chase.
+              finish. The finish is all four phases live. That is the entire
+              $5,000. No phase-by-phase invoicing to chase.
             </li>
             <li>
               <b>Retainer:</b> $500 a month once the build is live. Hosting,
