@@ -284,9 +284,13 @@ export default function RyanProposal() {
           </div>
           <ul className="mt">
             <li>
-              <b>Payment, dead simple.</b> $2,500 to start, $2,500 at the
-              finish. The finish is all four phases live. That is the entire
-              $5,000. No phase-by-phase invoicing to chase.
+              <b>Payment, dead simple.</b> $2,500 to start. $2,500 when it is
+              done. Done has one definition so there is never a question: all
+              four phases live in production, your technicians getting their
+              daily Telegram scorecards, and the manager dashboard up and
+              running for you. The day that is true, the final $2,500 is due.
+              That is the entire $5,000. No phase-by-phase invoicing, no moving
+              finish line.
             </li>
             <li>
               <b>Retainer:</b> $500 a month once the build is live. Hosting,
