@@ -2377,16 +2377,12 @@ footer {
   color: var(--mute);
 }
 
+/* Standard proposal reading column: 890px. This is the default every
+   proposal inherits. Do not narrow it per-proposal. */
 .proposal-body {
-  max-width: 740px;
+  max-width: 890px;
   margin: 0 auto;
   padding: 72px clamp(20px, 4vw, 40px) 96px;
-}
-/* Ari proposal: wider reading column. Base is 740px; this widens it by
-   ~1.5in (≈150px) so the content stretches and side margins shrink.
-   Scoped so other proposals are unaffected. */
-.proposal-ari .proposal-body {
-  max-width: 890px;
 }
 /* Ryan proposal: a wider reading column so it sits better against the
    full-width header on large screens. Scoped so Clark is unaffected. */
