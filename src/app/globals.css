@@ -2382,12 +2382,11 @@ footer {
   margin: 0 auto;
   padding: 72px clamp(20px, 4vw, 40px) 96px;
 }
-/* Ari proposal: wider side gutters (~1 to 2 inches each side) so the
-   reading column has more breathing room. Scoped so others are unaffected.
-   clamp keeps mobile tight, tops out near 2in (192px) on larger screens. */
+/* Ari proposal: wider reading column. Base is 740px; this widens it by
+   ~1.5in (≈150px) so the content stretches and side margins shrink.
+   Scoped so other proposals are unaffected. */
 .proposal-ari .proposal-body {
-  padding-left: clamp(20px, 9vw, 192px);
-  padding-right: clamp(20px, 9vw, 192px);
+  max-width: 890px;
 }
 /* Ryan proposal: a wider reading column so it sits better against the
    full-width header on large screens. Scoped so Clark is unaffected. */
